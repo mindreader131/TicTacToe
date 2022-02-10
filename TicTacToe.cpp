@@ -27,11 +27,3 @@ std::vector<int> GetPlayerChoice(){
     choice.push_back(index2);
     return choice;
 }
-
-int main(){
-    std::vector<int> spot = GetPlayerChoice();
-    for (int i = 0; i < spot.size(); i++){
-        std::cout << spot[i];
-    }
-    return 0;
-}
