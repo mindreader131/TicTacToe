@@ -20,7 +20,9 @@ void DisplayBoard(std::vector<std::vector<char>> board){
 std::vector<int> GetPlayerChoice(){
     int index1;
     int index2;
+    std::cout << "Enter first value: " << std::endl;
     std::cin >> index1;
+    std::cout << "Enter second value: " << std::endl;
     std::cin >> index2;
     std::vector<int> choice;
     choice.push_back(index1);
