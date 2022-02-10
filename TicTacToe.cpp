@@ -15,3 +15,10 @@ void DisplayBoard(std::vector<std::vector<char>> board){
         }
     }
 }
+
+std::vector<int> GetPlayerChoice(){
+    int index1;
+    int index2;
+    std::cin >> index1;
+    std::cin >> index2;
+}
