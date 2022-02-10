@@ -1,4 +1,5 @@
 #include <vector>
+#include <iostream>
 
 std::vector<std::vector<char>> CreateBoard() {
     std::vector<std::vector<char>> output = {
@@ -21,4 +22,16 @@ std::vector<int> GetPlayerChoice(){
     int index2;
     std::cin >> index1;
     std::cin >> index2;
+    std::vector<int> choice;
+    choice.push_back(index1);
+    choice.push_back(index2);
+    return choice;
+}
+
+int main(){
+    std::vector<int> spot = GetPlayerChoice();
+    for (int i = 0; i < spot.size(); i++){
+        std::cout << spot[i];
+    }
+    return 0;
 }
