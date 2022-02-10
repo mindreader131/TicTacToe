@@ -29,18 +29,6 @@ void PlaceMarker(std::vector<int> location, std::vector<std::vector<char>> & boa
     board[location[0]][location[1]] = XorO;
 }
 
-int main() {
-    std::vector<std::vector<char>> board = CreateBoard();
-    DisplayBoard(board);
-    std::vector<int> location = {1,2};
-    PlaceMarker(location, board, true);
-    std::cout<<std::endl;
-    DisplayBoard(board);
-    location = {0,0};
-    PlaceMarker(location, board, false);
-    std::cout<<std::endl;
-    DisplayBoard(board);
-
 std::vector<int> GetPlayerChoice(){
     int index1;
     int index2;
@@ -52,5 +40,22 @@ std::vector<int> GetPlayerChoice(){
     choice.push_back(index1);
     choice.push_back(index2);
     return choice;
+}
 
+int main() {
+    std::vector<std::vector<char>> board = CreateBoard();
+    for (int i = 0; i < 4; i++){
+        DisplayBoard(board);
+        std::vector<int> location = GetPlayerChoice();
+        PlaceMarker(location, board, true);
+        DisplayBoard(board);
+        std::vector<int> location2 = GetPlayerChoice();
+        PlaceMarker(location2, board, false);
+        DisplayBoard(board);
+    }
+    std::vector<int> location = GetPlayerChoice();
+    PlaceMarker(location, board, true);
+    DisplayBoard(board);
+    std::cout << "Good game!" << std::endl;
+    return 0;
 }
