@@ -6,4 +6,4 @@ std::vector<std::vector<char>> CreateBoard() {
         {' ', ' ', ' '},
         {' ', ' ', ' '}};
     return (output);
-}
+} 
